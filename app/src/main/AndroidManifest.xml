@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="it.paolomoschini.usermanagerrestrictions">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="it.paolomoschini.usermanagerrestrictions.receiver.MyDeviceAdminReceiver"
+            android:label="@string/app_name"
+            android:description="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+
+            <!--(Required) This is the primary action that a device administrator must implement
+             to be allowed to manage a device. This is sent to a device administrator when the user
+              enables it for administration. -->
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+
+            <!-- The meta-data referenced here provides addition information specific to the
+           device administrator, as parsed by the DeviceAdminInfo class -->
+            <meta-data android:name="android.app.device_admin"
+                android:resource="@xml/device_admin_sample" />
+        </receiver>
+
+    </application>
+
+</manifest>

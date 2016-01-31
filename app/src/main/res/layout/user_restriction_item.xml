@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/typeOfRestrictionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:text="DISALLOW_ADD_USER"/>
+
+    <TextView
+        android:id="@+id/descritionOfRestrictionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:minLines="1"
+        android:maxLines="3"
+        android:textStyle="italic"
+        android:textSize="12sp"
+        android:text="Specifies if a user is disallowed from enabling the Unknown Sources setting, that allows installation of apps from unknown sources."/>
+
+</LinearLayout>
