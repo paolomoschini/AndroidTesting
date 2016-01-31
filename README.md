@@ -1,2 +1,2 @@
-# AndroidTesting
-various android testing projects
+# UserManagerRestrictions
+simple testing app on new user restrictions 
